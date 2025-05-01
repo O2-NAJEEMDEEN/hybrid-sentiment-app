@@ -1,6 +1,7 @@
 streamlit
+transformers==4.37.2
+tensorflow==2.13.0
+tf-keras
 scikit-learn
-tensorflow
-transformers
 joblib
-numpy
+requests
