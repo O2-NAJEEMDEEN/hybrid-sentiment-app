@@ -63,7 +63,7 @@ def download_bert_tokenizer():
 def load_models():
     nb_model = joblib.load(ensure_file_downloaded("nb_model", "pkl"))
     vectorizer = joblib.load(ensure_file_downloaded("tfidf_vectorizer", "pkl"))
-    lstm_model = tf.keras.models.load_model(ensure_file_downloaded("lstm_model", "h5"))
+    lstm_model = tf.keras.models.load_model('models/lstm_model_v3')
     lstm_tokenizer = joblib.load(ensure_file_downloaded("lstm_tokenizer", "pkl"))
     bert_model = TFBertForSequenceClassification.from_pretrained("models/bert-base-uncased", local_files_only=True)
     bert_tokenizer = BertTokenizer.from_pretrained(download_bert_tokenizer())
